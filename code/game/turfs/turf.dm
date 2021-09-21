@@ -290,7 +290,6 @@
 		W.AfterChange(flags)
 
 	W.hybrid_lights_affecting = old_hybrid_lights_affecting
-	W.dynamic_lumcount = dynamic_lumcount
 
 	lighting_corner_NE = old_lighting_corner_NE
 	lighting_corner_SE = old_lighting_corner_SE
@@ -303,7 +302,14 @@
 
 		W.static_lighting_object = old_lighting_object
 
-		if(static_lighting_object && !static_lighting_object.needs_update)
+		var/area/A = loc
+
+		if(A.static_lighting && !old_lighting_object)
+			W.static_lighting_build_overlay()
+		else if(!A.static_lighting && old_lighting_object)
+			W.static_lighting_clear_overlay()
+
+		else if(static_lighting_object && !static_lighting_object.needs_update)
 			static_lighting_object.update()
 
 	//Since the old turf was removed from hybrid_lights_affecting, readd the new turf here
