@@ -195,3 +195,7 @@
 
 /datum/greyscale_config/badge/circle2
 	icon_file = 'icons/mob/modular/badge/circle2.dmi'
+/datum/greyscale_config/badge/stripes
+	json_config = 'code/datums/greyscale/json_configs/badge_stripe.json'
+	icon_file = 'icons/mob/modular/badge/stripes.dmi'
+

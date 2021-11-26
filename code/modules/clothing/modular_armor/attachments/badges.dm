@@ -28,6 +28,7 @@
 		"V" = /datum/greyscale_config/badge/V,
 		"Lambda" = /datum/greyscale_config/badge/lambda,
 		"Alternate Circle" = /datum/greyscale_config/badge/circle2,
+		"Multicolor Stripes" = /datum/greyscale_config/badge/stripes
 	)
 
 /obj/item/armor_module/armor/badge/Initialize()

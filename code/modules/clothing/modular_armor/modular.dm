@@ -417,11 +417,22 @@
 		return
 
 	var/new_color
+	var/second_color
+	var/third_color
 	if(colorable_colors)
 		new_color = colorable_colors[tgui_input_list(user, "Pick a color", "Pick color", colorable_colors)]
 	else
 		new_color = input(user, "Pick a color", "Pick color") as null|color
+	if(greyscale_config == /datum/greyscale_config/badge/stripes)
 
+		second_color = input(user, "Pick a color", "Pick color") as null|color
+		third_color = input(user, "Pick a color", "Pick color") as null|color
+		if(!do_after(user, 1 SECONDS, TRUE, src, BUSY_ICON_GENERIC))
+			return
+		set_greyscale_colors(list(new_color,second_color,third_color))
+		paint.uses--
+		update_icon()
+		return
 	if(!new_color)
 		return
 
