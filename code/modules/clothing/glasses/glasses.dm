@@ -266,7 +266,9 @@
 	flags_inventory = COVEREYES
 	flags_inv_hide = HIDEEYES
 	eye_protection = 2
-	starting_attachment_types = list(/obj/item/attachable/motiondetector/)
+	attachments_by_slot = list(ATTACHMENT_SLOT_RAIL)
+	attachments_allowed = list(/obj/item/attachable/motiondetector)
+	starting_attachments = list(/obj/item/attachable/motiondetector)
 
 /obj/item/clothing/glasses/enginners/Initialize()
 	. = ..()
