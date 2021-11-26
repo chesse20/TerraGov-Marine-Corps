@@ -256,6 +256,22 @@
 	. = ..()
 	AddComponent(/datum/component/clothing_tint, TINT_4)
 
+//enginners sight googles
+
+/obj/item/clothing/glasses/enginners
+	name = "enginners sight googles"
+	desc = "Goggles for enginners who have burned their eyes by accidently leaving their googles up, these goggles block your sight from plasma cutters while giving you awareness of motion around you"
+	icon_state = "welding-g"
+	item_state = "welding-g"
+	flags_inventory = COVEREYES
+	flags_inv_hide = HIDEEYES
+	eye_protection = 2
+	starting_attachment_types = list(/obj/item/attachable/motiondetector/)
+
+/obj/item/clothing/glasses/enginners/Initialize()
+	. = ..()
+	AddComponent(/datum/component/clothing_tint, TINT_5, TRUE)
+
 //sunglasses
 
 /obj/item/clothing/glasses/sunglasses
