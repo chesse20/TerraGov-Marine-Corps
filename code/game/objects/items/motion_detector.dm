@@ -80,7 +80,7 @@
 	update_icon()
 
 ///Activate the attachement when your are putting the gun out of your suit slot
-/obj/item/attachable/motiondetector/proc/start_processing_again(datum/source, obj/item/weapon/gun/equipping)
+/obj/item/attachable/motiondetector/proc/start_processing_again(datum/source, obj/item/weapon/gun/equipping, /obj/item/clothing/glasses/enginners)
 	SIGNAL_HANDLER
 	if(equipping != master_gun)
 		return

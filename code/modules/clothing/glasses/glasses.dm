@@ -261,11 +261,12 @@
 /obj/item/clothing/glasses/enginners
 	name = "enginners sight googles"
 	desc = "Goggles for enginners who have burned their eyes by accidently leaving their googles up, these goggles block your sight from plasma cutters while giving you awareness of motion around you"
-	icon_state = "welding-g"
-	item_state = "welding-g"
+	icon_state = "bigsunglasses"
+	item_state = "bigsunglasses"
 	flags_inventory = COVEREYES
 	flags_inv_hide = HIDEEYES
 	eye_protection = 2
+	attachment_offsets = list("rail_x" = 10, "rail_y" = 16)
 	attachments_by_slot = list(ATTACHMENT_SLOT_RAIL)
 	attachments_allowed = list(/obj/item/attachable/motiondetector)
 	starting_attachments = list(/obj/item/attachable/motiondetector)
